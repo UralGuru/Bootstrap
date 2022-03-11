@@ -52,3 +52,19 @@ body{
     border-bottom: 1px solid #ddd;
     padding: 10px;
 }
+
+.carousel {
+    background:#512DA8;
+    border-radius: 5px;
+}
+
+.carousel-item {
+    height: 170px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+}
