@@ -1,0 +1,77 @@
+.row-header{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.row-content{
+    margin: 0 auto;
+    padding: 50px 0 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}
+
+.footer{
+    background-color:aliceblue;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+}
+
+.jumbotron{
+    padding: 70px 30px;
+    margin: 0 auto;
+    background-color: #9575CD;
+    color: floralwhite;
+}
+
+address{
+    font-size: 80%;
+    margin: 0;
+    color: #0f0f0f;
+}
+
+body{
+    padding: 50px 0 0 0;
+    z-index: 0;
+}
+
+.navbar-dark{
+    background-color: #512DA8;
+}
+
+.logo-white{
+    width: 160px;
+}
+
+.Ratatouille{
+    width: 150px;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.carousel {
+    background:#512DA8;
+    border-radius: 5px;
+}
+
+.carousel-item {
+    height: 170px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+}
+
+#carouselButton {
+    position: absolute;
+    right:0px;
+    bottom: 0px;
+    z-index: 1;
+}
