@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody,
     CardTitle } from 'reactstrap';
 
-class Menu extends Component {
+class DishDetail  extends Component {
 
     constructor(props) {
         super(props);
@@ -61,6 +61,19 @@ class Menu extends Component {
             </div>
         );
     }
+
+    renderComments(dish)  {
+        const comment = this.props.comments.map((comments) => {
+            return (
+                <div className="col-12 col-md-5 m-1">
+                    <p>{this.props.comment.comment}</p>
+                    <p>{this.props.comment.author}</p>
+                    <p>{this.props.comment.date}</p>
+                </div>
+            )
+        })
+
+    }
 }
 
-export default Menu;
+export default DishDetail ;
