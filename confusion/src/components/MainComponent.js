@@ -7,12 +7,13 @@ import Footer from './FooterComponent';
 import Home from "./HomeComponent";
 import Contact from "./ContactComponent";
 import DishDetail from './DishdetailComponent';
-
+import About from "./AboutComponent";
 
 import {DISHES} from '../shared/dishes';
 import {COMMENTS} from "../shared/comments";
 import {PROMOTIONS} from "../shared/promotions";
 import {LEADERS} from "../shared/leaders";
+
 
 
 class Main extends Component {
@@ -55,6 +56,9 @@ class Main extends Component {
                 <Header/>
                 <Switch>
                     <Route path='/home' component={HomePage} />
+
+                    <Route path='/aboutus' component={About} />
+
                     <Route path='/menu/:dishId' component={DishWithId} />
                     <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
                     <Route exact path='/contactus' component={Contact} />} />
