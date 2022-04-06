@@ -1,22 +1,40 @@
 import React, {Component} from 'react';
-import {Card, CardImg, CardText, CardTitle, CardBody} from "reactstrap"
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import {Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem} from 'reactstrap';
+import {Link} from 'react-router-dom';
 
 class Dishdetail extends Component {
 
     render() {
         const {dish} = this.props;
+
         return (
-            <div className="row">
+            <div className="container">
+                <div className="row">
+                    <Breadcrumb>
 
-                {this.renderDish(dish)}
-
+                        <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
+                        <BreadcrumbItem active>{dish.name}</BreadcrumbItem>
+                    </Breadcrumb>
+                    <div className="col-12">
+                        <h3>{dish.name}</h3>
+                        <hr />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12 col-md-5 m-1">
+                        {/*<RenderDish dish={dish} />*/}
+                    </div>
+                    <div className="col-12 col-md-5 m-1">
+                        {/*<RenderComments comments={dish.comments} />*/}
+                    </div>
+                </div>
             </div>
         );
     }
 
 
-    renderDish = (dish) => {
+    RenderDish = (dish) => {
         if (dish != null) {
             return (
                 <div className="container">
@@ -30,10 +48,10 @@ class Dishdetail extends Component {
                                 </CardBody>
                             </Card>
                         </div>
-                            <div className="col-12 col-md-5 m-1">
-                                <h4>Comments</h4>
-                                {this.renderComments(dish.comments)}
-                            </div>
+                        <div className="col-12 col-md-5 m-1">
+                            <h4>Comments</h4>
+                            {this.renderComments(dish.comments)}
+                        </div>
 
                     </React.Fragment>
                 </div>
@@ -44,29 +62,23 @@ class Dishdetail extends Component {
         }
     }
 
-    renderComments = (comments) => {
-
+    RenderComments = (comments) => {
         if (comments != null) {
             const com = comments.map(co => {
-
-                    return (
-
+                return (
                         <React.Fragment>
                             <li>{co.comment}</li>
                             <br/>
                             <li>-- {co.author}, {this.formatDate(co.date)}</li>
                             <br/>
                         </React.Fragment>
-
-
                     )
-
                 }
             );
             return (
-                    <ul className="list-unstyled">
-                        {com}
-                    </ul>
+                <ul className="list-unstyled">
+                    {com}
+                </ul>
             )
         } else {
             return (<div></div>)
@@ -78,9 +90,7 @@ class Dishdetail extends Component {
         const date1 = new Date(date)
         const newdate = date1.toLocaleDateString("en-US", option)
         return newdate;
-
     }
 }
-
 
 export default Dishdetail;
