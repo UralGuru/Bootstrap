@@ -27,6 +27,10 @@ class Dishdetail extends Component {
                     </div>
                     <div className="col-12 col-md-5 m-1">
                         {/*<RenderComments comments={dish.comments} />*/}
+                        {/*<RenderComments comments={props.comments}
+                                        addComment={props.addComment}
+                                        dishId={props.dish.id}
+                        />*/}
                     </div>
                 </div>
             </div>
